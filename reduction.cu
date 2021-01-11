@@ -106,7 +106,7 @@ int main(int argc, char **argv)
     //Numthreads needs to be a power of 2 multiple of 32 and max 1024
     int NUM_THREADS =  256;
      //Multiple of the sm number (30)
-    int NUM_BLOCKS = min((lengthTab/NUM_THREADS), 30);
+    int NUM_BLOCKS = min((lengthTab/NUM_THREADS), 18000);
 //atleast one block
 if (NUM_BLOCKS == 0){ NUM_BLOCKS = 1;}
 int dev = findCudaDevice(argc, (const char **)argv);
