@@ -107,6 +107,7 @@ int main(int argc, char **argv)
     int NUM_THREADS =  256;
      //Multiple of the sm number (30)
     int NUM_BLOCKS = min((lengthTab/NUM_THREADS), 18000);
+    //In my case, the maximum array size for the algorithm to work is (18000*256)*2= 9 216 000
 //atleast one block
 if (NUM_BLOCKS == 0){ NUM_BLOCKS = 1;}
 int dev = findCudaDevice(argc, (const char **)argv);
