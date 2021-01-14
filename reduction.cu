@@ -93,7 +93,7 @@ void wrapper(float *input, int lengthTab, int NUM_THREADS, int NUM_BLOCKS)
 
     int singleThreadRes = singleThreadedSum(input, lengthTab);
 
-    printf("The result on the single thread function is: %d, Time : %d \n", singleThreadRes, msecTotal);
+    printf("The result on the single thread function is: %d \n", singleThreadRes);
     free(output);
 }
 
